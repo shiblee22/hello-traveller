@@ -7,9 +7,10 @@ const MapContainer = () => {
     longitude: 90.399452,
     zoom: 12
   });
+  const key= 'pk.eyJ1IjoiZm9raHJ1bGlzbGFtIiwiYSI6ImNrbWh4ZmZ6ZzA3bHAyd256bmRtdTBzdDYifQ.0rVx5jn0ezIkYUZ544voJg';
 
   return (
-    <ReactMapGL mapboxApiAccessToken={'pk.eyJ1IjoiZm9raHJ1bGlzbGFtIiwiYSI6ImNrbWh4ZmZ6ZzA3bHAyd256bmRtdTBzdDYifQ.0rVx5jn0ezIkYUZ544voJg'}
+    <ReactMapGL mapboxApiAccessToken={key}
       {...viewport}
       width="100%"
       height="100vh"
