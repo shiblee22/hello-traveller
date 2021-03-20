@@ -1,0 +1,42 @@
+[
+    {
+        "id": "1",
+        "vehicleName": "Bike",
+        "imgUrl": "https://i.ibb.co/j8c7dhj/Frame.png",
+        "fair" : {
+            "onePerson": 50,
+            "twoPerson": 100,
+            "fourPerson":200
+        }
+    },
+    {
+        "id": "2",
+        "vehicleName": "Car",
+        "imgUrl": "https://i.ibb.co/bsv34z3/Frame-2.png",
+        "fair" : {
+            "onePerson": 75,
+            "twoPerson": 150,
+            "fourPerson": 300
+        }
+    },
+    {
+        "id": "3",
+        "vehicleName": "Bus",
+        "imgUrl": "https://i.ibb.co/Y2Gdqxx/Frame-1.png",
+        "fair" : {
+            "onePerson": 100,
+            "twoPerson": 200,
+            "fourPerson":400
+        }
+    },
+    {
+        "id": "4",
+        "vehicleName": "Train",
+        "imgUrl": "https://i.ibb.co/dG3Fbsd/Group.png",
+        "fair" : {
+            "onePerson": 150,
+            "twoPerson": 300,
+            "fourPerson": 600
+        }
+    }
+]

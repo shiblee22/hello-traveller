@@ -1,0 +1,9 @@
+.signin-button{
+    width: 450px;
+    height: 40px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
