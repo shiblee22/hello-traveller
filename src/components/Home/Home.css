@@ -1,5 +1,5 @@
 .home-page{
-    background-image: linear-gradient(45deg,rgb(146, 8, 238),rgb(100, 14, 158));
+    background-image: url("../../images/background.jpg");
     min-height: 100vh;
     background-size: cover;
     background-position: bottom;

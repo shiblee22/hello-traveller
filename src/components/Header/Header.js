@@ -6,7 +6,7 @@ const Header = () => {
     const [loggedInUser] = useContext(UserContext);
     const { isSignedIn, name } = loggedInUser;
     return (
-        <nav className="navbar navbar-expand-lg sticky-top navbar-light bg-primary">
+        <nav className="navbar navbar-expand-lg sticky-top navbar-dark bg-secondary">
             <div className="container">
                 <Link to="/" className="navbar-brand"><h1>HELLO TRAVELLER </h1></Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +27,7 @@ const Header = () => {
                             <Link className="nav-link">Contact</Link>
                         </li>
                         <li className="nav-item">
-                            {isSignedIn ? <p className="nav-link bg-warning text-secondary rounded">{name}</p> : <Link to="/login" className="nav-link bg-warning text-secondary rounded">Login</Link>}
+                            {isSignedIn ? <p className="nav-link bg-danger rounded">{name}</p> : <Link to="/login" className="nav-link bg-danger rounded">Login</Link>}
                         </li>
 
                     </ul>

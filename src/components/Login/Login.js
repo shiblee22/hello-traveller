@@ -121,6 +121,7 @@ function Login() {
 
     return (
         <div className="container mt-5">
+            <div>
             {!newUser ? <div className="card">
                 <div className="card-body p-3">
                     <h3>Login</h3>
@@ -152,6 +153,7 @@ function Login() {
                         </form>
                     </div>
                 </div>}
+                </div>
             <div>
                 <p className="text-center">or</p>
                 <div className="signin-button mx-auto mt-2" onClick={googleSignIn}><FontAwesomeIcon icon={faGoogle} size="2x" /><h5 className="mx-auto">Continue with Google</h5></div>
