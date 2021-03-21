@@ -53,7 +53,7 @@ const Destination = () => {
                     </div> :
                     <div className="col-12 col-lg-4">
                         <div className="p-3"  style={{ backgroundColor: "lightgray", borderRadius:"5px" }}>
-                        <div style={{backgroundColor: "orangered", borderRadius:"5px", padding:"10px"}}>
+                        <div className="bg-danger text-dark" style={{borderRadius:"5px", padding:"10px"}}>
                             <h3>{destinations.pickFrom}</h3>
                             <p>to</p>
                             <h3>{destinations.pickTo}</h3>

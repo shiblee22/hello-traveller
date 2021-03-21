@@ -1,6 +1,6 @@
 .home-page{
-    background-image: url(../../images/Bg.png);
-    height: 100vh;
+    background-image: linear-gradient(45deg,rgb(146, 8, 238),rgb(100, 14, 158));
+    min-height: 100vh;
     background-size: cover;
     background-position: bottom;
 }
