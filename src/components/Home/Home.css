@@ -1,5 +1,6 @@
 .home-page{
     background-image: url(../../images/Bg.png);
-    background-position: contain;
     height: 100vh;
+    background-size: cover;
+    background-position: bottom;
 }

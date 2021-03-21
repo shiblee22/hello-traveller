@@ -1,4 +1,3 @@
-import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,6 +9,7 @@ import Login from './components/Login/Login';
 import { createContext, useState } from 'react';
 import Destination from './components/Destination/Destination';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Error from "./components/Error/Error";
 
 export const UserContext = createContext();
 
@@ -28,6 +28,9 @@ function App() {
           </Route>
           <PrivateRoute path="/destination/:id">
             <Destination></Destination>
+          </PrivateRoute>
+          <PrivateRoute path="*">
+            <Error></Error>
           </PrivateRoute>
         </Switch>
       </Router>

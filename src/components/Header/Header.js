@@ -15,7 +15,7 @@ const Header = () => {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
-                            <Link className="nav-link">Home</Link>
+                            <Link to="/" className="nav-link">Home</Link>
                         </li>
                         <li className="nav-item">
                             <Link to="/login" className="nav-link">Destination</Link>
@@ -27,7 +27,7 @@ const Header = () => {
                             <Link className="nav-link">Contact</Link>
                         </li>
                         <li className="nav-item">
-                            {isSignedIn ? <p className="nav-link bg-warning text-secondary rounded">{name}</p> : <Link to="/login" className="nav-link">Login</Link>}
+                            {isSignedIn ? <p className="nav-link bg-warning text-secondary rounded">{name}</p> : <Link to="/login" className="nav-link bg-warning text-secondary rounded">Login</Link>}
                         </li>
 
                     </ul>

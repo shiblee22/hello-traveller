@@ -35,14 +35,14 @@ function Login() {
     const googleSignIn = () => {
         handleGoogleSignIn()
             .then(res => {
-                handleResponse(res, true);
+                handleResponse(res, res.success);
             })
     }
 
     const fbSignIn = () => {
         handleFbSignIn()
             .then(res => {
-                handleResponse(res, true);
+                handleResponse(res, res.success);
             })
 
     }
@@ -106,14 +106,14 @@ function Login() {
         if (newUser && user.email && user.password) {
             createUserWithEmailAndPassword(user.name, user.email, user.password)
                 .then(res => {
-                    handleResponse(res, true);
+                    handleResponse(res, res.success);
                 })
         }
 
         if (!newUser && user.email && user.password) {
             signInWithEmailAndPassword(user.email, user.password)
                 .then(res => {
-                    handleResponse(res, true);
+                    handleResponse(res, res.success);
                 })
         }
         e.preventDefault();
@@ -124,6 +124,7 @@ function Login() {
             {!newUser ? <div className="card">
                 <div className="card-body p-3">
                     <h3>Login</h3>
+                    {loggedInUser.error && <p style={{ color: 'red' }}>{loggedInUser.error}</p>}
                     <form onSubmit={handleSubmit}>
                         <input className="form-control mt-3" type="text" name="email" onBlur={handleBlur} placeholder="Email" required />
                         {errorMassages.emailError && <p className="text-danger">{errorMassages.emailError}</p>}
@@ -137,6 +138,7 @@ function Login() {
                 <div className="card">
                     <div className="card-body p-3">
                         <h3>Create an Account</h3>
+                        {loggedInUser.error && <p style={{ color: 'red' }}>{loggedInUser.error}</p>}
                         <form onSubmit={handleSubmit}>
                             <input className="form-control mt-3" type="text" name="name" onBlur={handleBlur} placeholder="Name" required />
                             <input className="form-control mt-3" type="text" name="email" onBlur={handleBlur} placeholder="Email" required />
@@ -150,7 +152,6 @@ function Login() {
                         </form>
                     </div>
                 </div>}
-            <p style={{ color: 'red' }}>{user.error}</p>
             <div>
                 <p className="text-center">or</p>
                 <div className="signin-button mx-auto mt-2" onClick={googleSignIn}><FontAwesomeIcon icon={faGoogle} size="2x" /><h5 className="mx-auto">Continue with Google</h5></div>

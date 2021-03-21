@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import vehiclesData from "../../fakeData/vehiclesData.json";
 import peopleIcon from "../../images/peopleicon.png";
-import MapContainer from '../MapContainer/MapContainer';
+import GoogleMap from '../GoogleMap/GoogleMap';
 
 const Destination = () => {
     const { id } = useParams();
@@ -43,13 +43,17 @@ const Destination = () => {
                                 <label htmlFor="pickTo" className="form-label">Pick To</label>
                                 <input type="text" className="form-control" name="pickTo" onBlur={handleBlur} required></input>
                             </div>
+                            <div className="mb-3">
+                                <label htmlFor="date" className="form-label">Date</label>
+                                <input type="date" className="form-control" name="date" required></input>
+                            </div>
                             <button className="form-control btn-danger" type="submit">Search</button>
                         </form>
                         </div>
                     </div> :
                     <div className="col-12 col-lg-4">
                         <div className="p-3"  style={{ backgroundColor: "lightgray", borderRadius:"5px" }}>
-                        <div style={{backgroundColor: "orange", borderRadius:"5px", padding:"10px"}}>
+                        <div style={{backgroundColor: "orangered", borderRadius:"5px", padding:"10px"}}>
                             <h3>{destinations.pickFrom}</h3>
                             <p>to</p>
                             <h3>{destinations.pickTo}</h3>
@@ -80,7 +84,7 @@ const Destination = () => {
                         </div>
                     </div>}
                 <div className="col-12 col-lg-7">
-                    <MapContainer></MapContainer>
+                    <GoogleMap></GoogleMap>
                 </div>
             </div>
         </div>

@@ -22,9 +22,11 @@ export const handleGoogleSignIn = () => {
       };
       return signedInUser;
     })
-    .catch(err => {
-      console.log(err);
-      console.log(err.message);
+    .catch(error => {
+      const newUserInfo = {};
+      newUserInfo.error = error.message;
+      newUserInfo.success = false;
+      return newUserInfo;
     })
   }
 
@@ -41,9 +43,10 @@ export const handleGoogleSignIn = () => {
       };
       return signedInUser;
     }).catch(function(error) {
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      console.log(errorCode, errorMessage)
+      const newUserInfo = {};
+      newUserInfo.error = error.message;
+      newUserInfo.success = false;
+      return newUserInfo;
     });
   }
 
